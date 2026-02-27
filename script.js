@@ -1,7 +1,13 @@
 // script.js
 // Handles tab navigation and UI interactions for the Placement Prep AI Assistant
 
-const API_URL = 'http://localhost:3001/api/generate';
+// Use your deployed backend URL here after you deploy to Render/Railway
+const PROD_API_URL = 'https://YOUR-BACKEND-NAME.onrender.com/api/generate';
+const LOCAL_API_URL = 'http://localhost:3001/api/generate';
+
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? LOCAL_API_URL
+  : PROD_API_URL;
 
 // Utility function to switch active tab and panel
 function switchTab(tabName) {
