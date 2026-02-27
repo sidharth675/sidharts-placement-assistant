@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidharth's Placement Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <h1>Sidharth's Placement Assistant</h1>
+        <p class="tagline">Your personal interview coach for tech & non‑tech roles</p>
+    </header>
+    <nav class="tabs">
+        <button class="tab active" data-tab="resume">Resume</button>
+        <button class="tab" data-tab="interview">Interview Q&A</button>
+        <button class="tab" data-tab="aptitude">Aptitude</button>
+        <button class="tab" data-tab="project">Project Guide</button>
+    </nav>
+    <main class="content">
+        <section id="resume" class="panel active">
+            <h2>Resume Improvement</h2>
+            <textarea id="resume-input" placeholder="Paste your resume text here..." rows="10"></textarea>
+            <button id="resume-analyze" class="action-btn">Get AI Suggestions</button>
+            <pre id="resume-output" class="output"></pre>
+        </section>
+        <section id="interview" class="panel">
+            <h2>Interview Q&A</h2>
+            <select id="category-select">
+                <option value="hr">HR / Behavioral</option>
+                <option value="technical">Technical</option>
+            </select>
+            <input type="text" id="question-input" placeholder="Ask a question..." />
+            <button id="ask-btn" class="action-btn">Ask AI</button>
+            <pre id="answer-output" class="output"></pre>
+        </section>
+        <section id="aptitude" class="panel">
+            <h2>Aptitude Problem Solving</h2>
+            <button id="new-problem" class="action-btn">Generate Problem</button>
+            <pre id="problem-output" class="output"></pre>
+            <textarea id="solution-input" placeholder="Write your solution..." rows="6"></textarea>
+            <button id="check-solution" class="action-btn">Check Solution</button>
+            <pre id="solution-feedback" class="output"></pre>
+        </section>
+        <section id="project" class="panel">
+            <h2>Project Explanation Guidance</h2>
+            <textarea id="project-input" placeholder="Describe your project (tech stack, challenges, impact)..."
+                rows="8"></textarea>
+            <button id="project-guide" class="action-btn">Get Guidance</button>
+            <pre id="project-output" class="output"></pre>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2026 Placement Prep AI. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
